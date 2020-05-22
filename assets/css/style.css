@@ -1,5 +1,32 @@
 body {
-    background-image: url(../images/88891.jpg);
+    background-image: url(../images/landingpage\ background.jpg);
     background-size: 100%;
     
+}
+
+.jumbotron {
+    background-image: url(https://www.rebornevo.com/uploads/monthly_2018_03/logobanner.png.a2a3c2e71ba354cdd87185317fa8a552.png);
+    background-size: auto;
+    opacity: 60%;
+}
+
+.jumbotron h1 {
+    text-shadow: 3px 2px #ff0000;
+    color: white;
+}
+
+.jumbotron p {
+    text-shadow: 3px 2px #ff0000;
+    color: white;
+}
+
+hr {
+    border-color: white;
+    border-width: 3px;
+}
+
+#startbtn {
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
 }
