@@ -30,3 +30,32 @@ hr {
     margin: auto;
     margin-top: 50px;
 }
+
+/* zone page */
+
+
+
+/* fire page, image credit https://www.deviantart.com/agifarclor */
+.fire {
+    background-image: url(../images/volcano_gif.gif);
+    background-size: 100%;
+    
+}
+/* water page */
+.water {
+    background-image: url(../images/water_gif.gif);
+    background-size: 100%;
+    
+}
+/* snow page */
+.snow {
+    background-image: url(../images/daniel-magyar-02.jpg);
+    background-size: 100%;
+    
+}
+/* haunted page */
+.haunted {
+    background-image: url(../images/haunted-mansion-animated-series.jpg);
+    background-size: 100%;
+    
+}
