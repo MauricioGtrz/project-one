@@ -1,6 +1,6 @@
 //javascript
 
-var pokemonArray = ["pikachu, charmander, abra"];
+var pokemonArray = ["pikachu", "charmander", "abra"];
 
 function displayPokemonInfo() {
     var pokemon = $(this).attr("pokemon-name");
