@@ -30,3 +30,24 @@ hr {
     margin: auto;
     margin-top: 50px;
 }
+
+div.card:hover {
+	-moz-box-shadow: 0 0 10px red;
+	-webkit-box-shadow: 0 0 10px red;
+    box-shadow: 0 0 10px red;
+    opacity: 100%;
+    }
+    
+#top-cards {
+    margin-top: 130px;
+}
+
+img.opacity {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	}	
+	
+img.opacity:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	}
