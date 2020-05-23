@@ -32,7 +32,7 @@ function renderButtons() {
 
         var a = $("<button>");
         a.addClass("pokemon");
-        a.attr("pokemon-name", movies[i]);
+        a.attr("pokemon-name", pokemonArray[i]);
         a.text(pokemonArray[i]);
         $("#buttons-view").append(a);
     }
