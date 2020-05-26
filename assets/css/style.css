@@ -84,3 +84,41 @@ img.opacity:hover {
     
 }
 
+
+#images{
+    text-align:center;
+    border:1px solid #666;
+}
+
+.pokemonimg {
+    display:inline-block;
+    margin:5px 20px;
+    padding:20px;
+    border:1px solid #CCC;
+    width: 15%;
+    height: 25%;
+}
+
+.dropdown-item {
+    color: black;
+}
+
+.dropdown {
+    margin-top: 35%;
+}
+
+.img-top {
+    margin-top: 5%;
+    margin-left: 15%;
+    
+}
+
+.img-btm {
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+.img-left {
+    margin-left: 30%;
+}
+
