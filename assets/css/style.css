@@ -72,24 +72,29 @@ img.opacity:hover {
 .fire {
     background-image: url(../images/volcano_gif.gif);
     background-size: 100%;
+    background-repeat: no-repeat;
     
 }
 /* water page */
 .water {
     background-image: url(../images/water_gif.gif);
     background-size: 100%;
+    background-repeat: no-repeat;
     
 }
 /* snow page */
 .snow {
-    background-image: url(../images/daniel-magyar-02.jpg);
+    background-image: url(../images/00b03d50a839baac-animated-gif-background-snow.gif);
     background-size: 100%;
+    background-repeat: no-repeat;
     
 }
 /* haunted page */
 .haunted {
-    background-image: url(../images/haunted-mansion-animated-series.jpg);
+    background-image: url(../images/74db0d722fa79f818b7f4a49247ba875.gif);
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #17100d;
     
 }
 

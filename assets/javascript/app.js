@@ -30,3 +30,15 @@ function displayPokemonInfo() {
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
+
+
+var queryURLmusic = "https://freesound.org/apiv2/search/text/?query=piano&token=PFapxdeGuM4lkfOpgYO76d94lZkeyT6Ae1mNnKBK"
+ + zoneMusic;
+
+$.ajax({
+  url: queryURLmusic,
+  method: "GET"
+}).then(function(response) {
+  console.log(response);
+});
+
