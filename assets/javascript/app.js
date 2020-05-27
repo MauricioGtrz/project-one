@@ -1,6 +1,9 @@
 //javascript
 
-var pokemonArray = ["zubat", "gastly", "haunter", "gengar"];
+var pokemonHauntedArray = ["zubat", "gastly", "haunter", "gengar"];
+var pokemonSnowArray = ["snorunt", "glalie", "swinub", "walrein"];
+var pokemonFireArray = ["slugma", "torkoal", "magmar", "charizard"];
+var pokemonWaterArray = ["wailmer", "staryu", "poliwhirl", "gyarados"];
 
 function displayPokemonInfo() {
     var pokemon = $(this).attr("pokemon-name");
@@ -25,19 +28,19 @@ function displayPokemonInfo() {
       });
 }
 
-function renderButtons() {
-    $("#buttons-view").empty();
+// function renderButtons() {
+//     $("#buttons-view").empty();
 
-    for (var i = 0; i < pokemonArray.length; i++) {
+//     for (var i = 0; i < pokemonHauntedArray.length; i++) {
 
-        var a = $("<button>");
-        a.addClass("pokemon");
-        a.attr("pokemon-name", pokemonArray[i]);
-        a.text(pokemonArray[i]);
-        $("#buttons-view").append(a);
-    }
-}
+//         var a = $("<button>");
+//         a.addClass("pokemon");
+//         a.attr("pokemon-name", pokemonHauntedArray[i]);
+//         a.text(pokemonHauntedArray[i]);
+//         $("#buttons-view").append(a);
+//     }
+// }
 
-  $(document).on("click", ".pokemon", displayPokemonInfo);
+$(document).on("click", ".pokemon", displayPokemonInfo);
 
-  renderButtons();
+renderButtons();
