@@ -1,6 +1,9 @@
 //javascript
 
-var pokemonArray = ["pikachu", "charmander", "abra"];
+var pokemonHauntedArray = ["zubat", "gastly", "haunter", "gengar"];
+var pokemonSnowArray = ["snorunt", "glalie", "swinub", "walrein"];
+var pokemonFireArray = ["slugma", "torkoal", "magmar", "charizard"];
+var pokemonWaterArray = ["wailmer", "staryu", "poliwhirl", "gyarados"];
 
 function displayPokemonInfo() {
     var pokemon = $(this).attr("pokemon-name");
@@ -25,19 +28,17 @@ function displayPokemonInfo() {
       });
 }
 
-function renderButtons() {
-    $("#buttons-view").empty();
+$(document).on("click", ".pokemonimg", displayPokemonInfo);
 
-    for (var i = 0; i < pokemonArray.length; i++) {
 
-        var a = $("<button>");
-        a.addClass("pokemon");
-        a.attr("pokemon-name", pokemonArray[i]);
-        a.text(pokemonArray[i]);
-        $("#buttons-view").append(a);
-    }
-}
 
-  $(document).on("click", ".pokemon", displayPokemonInfo);
+var queryURLmusic = "https://freesound.org/apiv2/search/text/?query=piano&token=PFapxdeGuM4lkfOpgYO76d94lZkeyT6Ae1mNnKBK"
+ + zoneMusic;
 
-  renderButtons();
+$.ajax({
+  url: queryURLmusic,
+  method: "GET"
+}).then(function(response) {
+  console.log(response);
+});
+

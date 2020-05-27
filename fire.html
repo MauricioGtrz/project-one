@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel = "stylesheet" type= "text/css" href = "assets/css/style.css">
-    <title>Safari Zone Adventure</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel = "stylesheet" type= "text/css" href = "assets/css/style.css">
+  <script src="https://kit.fontawesome.com/97a7137fff.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <title>Safari Zone Adventure</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body class="fire">
     
@@ -21,48 +28,94 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-9 d-flex justify-content-center">
+        <div class="row">
+          <img pokemon-name = "slugma" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png" class="rounded-circle text-center pokemonimg img-left img-top" alt="Cinque Terre">
+          <img pokemon-name = "torkoal" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/324.png" class="rounded-circle text-center pokemonimg img-top" alt="Cinque Terre">
+          <img pokemon-name = "magmar" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png" class="rounded-circle text-center pokemonimg img-left img-btm" alt="Cinque Terre">
+          <img pokemon-name = "charizard" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" class="rounded-circle text-center pokemonimg img-btm" alt="Cinque Terre">
+        </div>
+        
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select your region
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="title.html">Zone HQ</a>
+            <a class="dropdown-item" href="haunted.html">Haunted</a>
+            <a class="dropdown-item" href="water.html">Water</a>
+            <a class="dropdown-item" href="snow.html">Snow</a>
+          </div>
+        </div>
+       
+      </div>
     </div>
-
     <div class="row">
+      <div class="col-sm-12 d-flex justify-content-center" id="buttons-view">
+      
+      </div>
+      </div>
+ 
+
+      <div class="row">
       <div class="col-sm-12 d-flex justify-content-center">
         <img src="..." class="img-fluid" alt="Responsive image">
       </div>
       </div>
       
       <div class="row">
-      <div class="col-sm">
-        <table class="table table-hover table-dark">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <table class="table table-hover table-dark">
+            <thead>
+              
+                <th scope="row" id="pokeTabName">Gengar</th>
+                
+              
+              <tr>
+                <th scope="col">Pokemon No.:</th>
+                <th scope="row" id="pokeTabNum">12</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="col">Type:</th>
+                <th scope="row" id="pokeTabType">12</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="col">Height:</th>
+                <th scope="row" id="pokeTabHt">12</th>
+                <td></td>
+              </tr>
+              <tr>
+              <th scope="col">Weight:</th>
+              <th scope="row" id="pokeTabWt">12</th>
+              <td></td>
             </tr>
-          </thead>
-          <tbody>
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th scope="col">Strong against:</th>
+              <th scope="row" id="pokeTabStr">12</th>
+              <td></td>
             </tr>
             <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <th scope="col">Weak against</th>
+              <th scope="row" id="pokeTabWk">12</th>
+              <td></td>
             </tr>
             <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
+              <th scope="col">Moves:</th>
+              <th scope="row" id="pokeTabMoves">12</th>
+              <td></td>
             </tr>
-          </tbody>
-        </table>
+              
+            </thead>
+          </table>
+        </div>
+        <div class="col-sm-2"></div>
       </div>
-    </div>
   </div>
+
+ 
 
       <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
