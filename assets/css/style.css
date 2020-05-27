@@ -5,19 +5,24 @@ body {
 }
 
 .jumbotron {
-    background-image: url(https://www.rebornevo.com/uploads/monthly_2018_03/logobanner.png.a2a3c2e71ba354cdd87185317fa8a552.png);
-    background-size: auto;
+    background-image: url(../images/pokemon-logo-black-transparent.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top, center;
+    background-color: #17a2b8;
     opacity: 60%;
 }
 
 .jumbotron h1 {
     text-shadow: 3px 2px #ff0000;
-    color: white;
+    color: black;
+    font-family: 'Orbitron', sans-serif;
+   
 }
 
 .jumbotron p {
-    text-shadow: 3px 2px #ff0000;
-    color: white;
+    text-shadow: 3px 2px white;
+    color:black;
 }
 
 hr {
