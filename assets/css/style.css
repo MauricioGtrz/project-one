@@ -58,8 +58,12 @@ img.opacity {
 	
 img.opacity:hover {
 	opacity: 1;
-	filter: alpha(opacity=100);
-	}
+    filter: alpha(opacity=100);
+    }
+    
+
+
+
 /* zone page */
 
 
