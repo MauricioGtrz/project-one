@@ -28,19 +28,5 @@ function displayPokemonInfo() {
       });
 }
 
-// function renderButtons() {
-//     $("#buttons-view").empty();
+$(document).on("click", ".pokemonimg", displayPokemonInfo);
 
-//     for (var i = 0; i < pokemonHauntedArray.length; i++) {
-
-//         var a = $("<button>");
-//         a.addClass("pokemon");
-//         a.attr("pokemon-name", pokemonHauntedArray[i]);
-//         a.text(pokemonHauntedArray[i]);
-//         $("#buttons-view").append(a);
-//     }
-// }
-
-$(document).on("click", ".pokemon", displayPokemonInfo);
-
-renderButtons();
