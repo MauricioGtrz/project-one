@@ -52,8 +52,8 @@ div.card:hover {
 }
 
 img.opacity {
-	opacity: 0.5;
-	filter: alpha(opacity=50);
+	opacity: 90;
+	filter: alpha(opacity=80);
 	}	
 	
 img.opacity:hover {
