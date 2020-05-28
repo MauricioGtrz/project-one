@@ -65,6 +65,12 @@ img.opacity:hover {
 
 
 /* zone page */
+.zoneHQ {
+    background-image: url(../images/Safari_Hut.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
 
 
 
@@ -97,6 +103,8 @@ img.opacity:hover {
     background-color: #17100d;
     
 }
+
+
 
 
 #images{
@@ -140,3 +148,22 @@ img.opacity:hover {
     margin: 5%;
 }
 
+#footer {
+    color: #ffffff;
+    font-size: small;
+    font-family: 'Orbitron', sans-serif;
+    background-color:#666666;
+    outline-width: 10px;
+    outline-style: solid;
+    outline-color: #4aaa;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    }
