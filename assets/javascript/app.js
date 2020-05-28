@@ -1,6 +1,6 @@
 //javascript
 
-var pokemonHauntedArray = ["zubat", "gastly", "haunter", "gengar"];
+var pokemonHauntedArray = ["Zubat", "gastly", "haunter", "gengar"];
 var pokemonSnowArray = ["snorunt", "glalie", "swinub", "walrein"];
 var pokemonFireArray = ["slugma", "torkoal", "magmar", "charizard"];
 var pokemonWaterArray = ["wailmer", "staryu", "poliwhirl", "gyarados"];
@@ -25,6 +25,11 @@ function displayPokemonInfo() {
             stats: response.stats.map( stat => stat.stat.name + ' ' + stat.base_stat).join(", ")
         };
         console.log(pokemon);
+        $("#pokeTabName").html(response.name);
+        $("#pokeTabNum").html(response.id);
+        $("#pokeTabType").html(response.type);
+        $("#pokeTabHt").html(response.height);
+        $("#pokeTabWt").html(response.weight);
       });
 }
 
