@@ -6,7 +6,7 @@ body {
 
 .jumbotron {
     background-image: url(../images/pokemon-logo-black-transparent.png);
-    background-size: 50%;
+    background-size: 30%;
     background-repeat: no-repeat;
     background-position: top, center;
     background-color: #17a2b8;
