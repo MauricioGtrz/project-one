@@ -1,9 +1,9 @@
 //javascript
 
-var pokemonHauntedArray = ["Zubat", "gastly", "haunter", "gengar"];
-var pokemonSnowArray = ["snorunt", "glalie", "swinub", "walrein"];
-var pokemonFireArray = ["slugma", "torkoal", "magmar", "charizard"];
-var pokemonWaterArray = ["wailmer", "staryu", "poliwhirl", "gyarados"];
+var pokemonHauntedArray = ["misdreavus", "shuppet", "banette", "dusclops"];
+var pokemonSnowArray = ["snorunt", "vanillite", "glaceon", "glalie"];
+var pokemonFireArray = ["slugma", "rapidash", "torkoal", "Magmortar"];
+var pokemonWaterArray = ["magikarp", "staryu", "poliwhirl", "wailord"];
 
 function displayPokemonInfo() {
     var pokemon = $(this).attr("pokemon-name");
@@ -29,8 +29,8 @@ function displayPokemonInfo() {
         $("#pokeTabName").html((response.name).substr(0,1).toUpperCase()+(response.name).substr(1));
         $("#pokeTabNum").html(response.id);
         $("#pokeTabType").html(response.type);
-        $("#pokeTabHt").html(response.height/10 + "m");
-        $("#pokeTabWt").html(response.weight * 0.1 + "kg");
+        $("#pokeTabHt").html((response.height/10).toFixed(2) + "m");
+        $("#pokeTabWt").html((response.weight * 0.1).toFixed(2) + "kg");
       });
 }
 
