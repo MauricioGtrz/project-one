@@ -35,18 +35,21 @@ function displayPokemonInfo() {
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
-
-
-var queryURLmusic = "https://freesound.org/apiv2/search/text/?query=piano&token=PFapxdeGuM4lkfOpgYO76d94lZkeyT6Ae1mNnKBK"
-;
-
-$.ajax({
-  url: queryURLmusic,
-  method: "GET"
-}).then(function(response) {
-  console.log(response);
-});
-
 window.onload=function(){
-  this.document.getElementById("#homePagemusic");
+  document.getElementById("hauntedMusic").play();
 }
+
+
+// var queryURLmusic = "https://freesound.org/apiv2/search/text/?query=piano&token=PFapxdeGuM4lkfOpgYO76d94lZkeyT6Ae1mNnKBK"
+// ;
+
+// $.ajax({
+//   url: queryURLmusic,
+//   method: "GET"
+// }).then(function(response) {
+//   console.log(response);
+// });
+
+// window.onload=function(){
+//   this.document.getElementById("#homePagemusic");
+// }
