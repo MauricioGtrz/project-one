@@ -1,9 +1,9 @@
 //javascript
 
-var pokemonHauntedArray = ["zubat", "gastly", "haunter", "gengar"];
-var pokemonSnowArray = ["snorunt", "glalie", "swinub", "walrein"];
-var pokemonFireArray = ["slugma", "torkoal", "magmar", "charizard"];
-var pokemonWaterArray = ["wailmer", "staryu", "poliwhirl", "gyarados"];
+var pokemonHauntedArray = ["misdreavus", "shuppet", "banette", "dusclops"];
+var pokemonSnowArray = ["snorunt", "vanillite", "glaceon", "glalie"];
+var pokemonFireArray = ["slugma", "rapidash", "torkoal", "Magmortar"];
+var pokemonWaterArray = ["magikarp", "staryu", "poliwhirl", "wailord"];
 
 function displayPokemonInfo() {
     var pokemon = $(this).attr("pokemon-name");
@@ -25,20 +25,73 @@ function displayPokemonInfo() {
             stats: response.stats.map( stat => stat.stat.name + ' ' + stat.base_stat).join(", ")
         };
         console.log(pokemon);
+        
+        $("#pokeTabName").html((response.name).substr(0,1).toUpperCase()+(response.name).substr(1));
+        $("#pokeTabNum").html(response.id);
+        $("#pokeTabType").html(response.type);
+        $("#pokeTabHt").html((response.height/10).toFixed(2) + "m");
+        $("#pokeTabWt").html((response.weight * 0.1).toFixed(2) + "kg");
       });
 }
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
+//GIPHY image pull
 
+var pokemonGIF = "#pokemon-name";
+var queryURLGIF = "https://api.giphy.com/v1/gifs/search?api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&q=" + pokemonGIF + "&limit=4";
 
-var queryURLmusic = "https://freesound.org/apiv2/search/text/?query=piano&token=PFapxdeGuM4lkfOpgYO76d94lZkeyT6Ae1mNnKBK"
- + zoneMusic;
-
+// Creating an AJAX call for the specific character button being clicked
 $.ajax({
-  url: queryURLmusic,
+  url: queryURLGIF,
   method: "GET"
 }).then(function(response) {
+ $("pokemon-view").html("");
   console.log(response);
+  var results = response.data;
+
+ console.log("length", results.length);
 });
 
+// Home theme music
+window.onload=function(){
+  document.getElementById("homeMusic").play();
+}
+
+//Zone theme music
+window.onload=function(){
+  document.getElementById("zoneEffect").play();
+  document.getElementById("zoneEffect").volume = .2;
+}
+
+window.onload=function(){
+  document.getElementById("zoneMusic").play();
+}
+
+//Haunted theme music
+window.onload=function(){
+  document.getElementById("hauntedMusic").play();
+}
+
+window.onload=function(){
+  document.getElementById("hauntedEffect").play();
+}
+
+//Snow theme music
+window.onload=function(){
+  document.getElementById("snowMusic").play();
+}
+
+window.onload=function(){
+  document.getElementById("snowEffect").play();
+}
+
+//Fire theme music
+window.onload=function(){
+  document.getElementById("fireMusic").play();
+}
+
+//Water theme music
+window.onload=function(){
+  document.getElementById("waterMusic").play();
+}

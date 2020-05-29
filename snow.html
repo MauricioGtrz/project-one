@@ -10,11 +10,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
   <title>Safari Zone Adventure</title>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
+
 <body class="snow">
+
+  <audio src="assets/music/aquarium-by-kevin-macleod-from-filmmusic-io.mp3" id="snowMusic" loop="loop" autoplay="autoplay"></audio>
+  <audio src="assets/music/blizzard.mp3" id="snowEffect" loop="loop" autoplay="autoplay"></audio>
     
 
   <div class="container">
@@ -22,17 +26,17 @@
       <div class="col-sm-3">
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
-            <h1 class="display-4">Snow Zone</h1>
-            <p class="lead">Let's catch some snow type Pokemon!</p>
+            <h1 class="display-4" id="jumboZones">Snow Zone</h1>
+            <p class="lead">Let's catch some ice type Pokémon!</p>
           </div>
         </div>
       </div>
       <div class="col-sm-9 d-flex justify-content-center">
         <div class="row">
-          <img pokemon-name = "snorunt" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/362.png" class="rounded-circle text-center pokemonimg img-left img-top" alt="Cinque Terre">
-          <img pokemon-name = "glalie" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/363.png" class="rounded-circle text-center pokemonimg img-top" alt="Cinque Terre">
-          <img pokemon-name = "swinub" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/220.png" class="rounded-circle text-center pokemonimg img-left img-btm" alt="Cinque Terre">
-          <img pokemon-name = "walrein" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/365.png" class="rounded-circle text-center pokemonimg img-btm" alt="Cinque Terre">
+          <a href="###" class="pokebtn"><img pokemon-name = "snorunt" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/361.png" class="rounded-circle text-center pokemonimg img-left img-top opacity" alt="snorunt"></a>
+          <a href="###" class="pokebtn"><img pokemon-name = "vanillite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/582.png" class="rounded-circle text-center pokemonimg img-top opacity" alt="glalie"></a>
+          <a href="###" class="pokebtn"><img pokemon-name = "glaceon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png" class="rounded-circle text-center pokemonimg img-btm opacity" alt="swinub"></a>
+          <a href="###" class="pokebtn"><img pokemon-name = "glalie" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/362.png" class="rounded-circle text-center pokemonimg img-left img-btm opacity" alt="walrein"></a>
         </div>
         
         <div class="dropdown">
@@ -44,7 +48,7 @@
             <a class="dropdown-item" href="haunted.html">Haunted</a>
             <a class="dropdown-item" href="fire.html">Fire</a>
             <a class="dropdown-item" href="water.html">Water</a>
-          </div>
+          </div> 
         </div>
        
       </div>
@@ -54,6 +58,12 @@
       
       </div>
       </div>
+
+      <div class="row">
+        <div class="col-sm-12 d-flex justify-content-center">
+          <img src="..." class="img-fluid" alt="Responsive image">
+        </div>
+        </div>
  
 
       <div class="row">
@@ -62,42 +72,42 @@
           <table class="table table-hover table-dark">
             <thead>
               
-                <th scope="row" id="pokeTabName">Gengar</th>
+                <th scope="row" id="pokeTabName"></th>
                 
               
               <tr>
                 <th scope="col">Pokemon No.:</th>
-                <th scope="row" id="pokeTabNum">12</th>
+                <th scope="row" id="pokeTabNum"></th>
                 <td></td>
               </tr>
               <tr>
                 <th scope="col">Type:</th>
-                <th scope="row" id="pokeTabType">12</th>
+                <th scope="row" id="pokeTabType"></th>
                 <td></td>
               </tr>
               <tr>
                 <th scope="col">Height:</th>
-                <th scope="row" id="pokeTabHt">12</th>
+                <th scope="row" id="pokeTabHt"></th>
                 <td></td>
               </tr>
               <tr>
               <th scope="col">Weight:</th>
-              <th scope="row" id="pokeTabWt">12</th>
+              <th scope="row" id="pokeTabWt"></th>
               <td></td>
             </tr>
             <tr>
               <th scope="col">Strong against:</th>
-              <th scope="row" id="pokeTabStr">12</th>
+              <th scope="row" id="pokeTabStr"></th>
               <td></td>
             </tr>
             <tr>
               <th scope="col">Weak against</th>
-              <th scope="row" id="pokeTabWk">12</th>
+              <th scope="row" id="pokeTabWk"></th>
               <td></td>
             </tr>
             <tr>
               <th scope="col">Moves:</th>
-              <th scope="row" id="pokeTabMoves">12</th>
+              <th scope="row" id="pokeTabMoves"></th>
               <td></td>
             </tr>
               
@@ -107,9 +117,15 @@
         <div class="col-sm-2"></div>
       </div>
   </div>
+  <footer id="footer"><p>This application is for non-commercial purposes only. All copyrights are owned wholly by ©2020 Pokémon ©1995-2020 Nintendo/Creatures Inc./GAME FREAK inc.</p>
 
+  </footer> 
  
 
       <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
+
+<!-- Aquarium by Kevin MacLeod
+Link: https://incompetech.filmmusic.io/song/5738-aquarium
+License: http://creativecommons.org/licenses/by/4.0/ -->

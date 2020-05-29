@@ -6,16 +6,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel = "stylesheet" type= "text/css" href = "assets/css/style.css">
     <title>Safari Zone Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="alert alert-success" role="alert">
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Congratulations! You just have put your first step into the most exciting Pokémon adventure!!</p>
+<body class="zoneHQ">
+
+  <audio src="assets/music/birds_forest.mp3" id="zoneEffect" loop="loop" autoplay="autoplay" ></audio>
+  <audio src="assets/music/wholesome-by-kevin-macleod-from-filmmusic-io.mp3" id="zoneMusic" loop="loop" autoplay="autoplay"></audio>
+
+  <!-- <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Welcome!</h4>
+    <p>Explore the Safari Zone and learn about the Pokémon universe</p>
     <hr>
-    <p class="mb-0">Whenever you are ready, click on the Zone that you would like to explore!!</p>
-  </div>
+    <p class="mb-0">When you are ready, click on the Zone that you would like to explore.</p>
+  </div> -->
 
     <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12"></div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 text-center pt-3" id="jumboZones">Zone Headquarters</h1>
+              <p class="lead">When you're ready, select the zone you would like to explore to learn about the Pokémon universe!</p>
+            </div>
+          </div>
+        </div>
+      
         <div class="row" id="top-cards">
           
             <div class="col-md-6">
@@ -64,7 +79,15 @@
           </div>
         </div>
     </div>
+
+    <footer id="footer"><p>This application is for non-commercial purposes only. All copyrights are owned wholly by ©2020 Pokémon ©1995-2020 Nintendo/Creatures Inc./GAME FREAK inc.</p>
+
+    </footer> 
     
     
 </body>
 </html>
+<!-- 
+Wholesome by Kevin MacLeod
+Link: https://filmmusic.io/song/5050-wholesome
+License: http://creativecommons.org/licenses/by/4.0/ -->
