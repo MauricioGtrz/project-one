@@ -36,6 +36,22 @@ function displayPokemonInfo() {
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
+//GIPHY image pull
+
+var pokemonGIF = "#pokemon-name";
+var queryURLGIF = "https://api.giphy.com/v1/gifs/search?api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&q=" + pokemonGIF + "&limit=4";
+
+// Creating an AJAX call for the specific character button being clicked
+$.ajax({
+  url: queryURLGIF,
+  method: "GET"
+}).then(function(response) {
+ $("pokemon-view").html("");
+  console.log(response);
+  var results = response.data;
+
+ console.log("length", results.length);
+});
 
 // Home theme music
 window.onload=function(){
