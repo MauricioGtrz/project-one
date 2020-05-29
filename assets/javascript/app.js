@@ -25,10 +25,11 @@ function displayPokemonInfo() {
             stats: response.stats.map( stat => stat.stat.name + ' ' + stat.base_stat).join(", ")
         };
         console.log(pokemon);
+        
         $("#pokeTabName").html((response.name).substr(0,1).toUpperCase()+(response.name).substr(1));
         $("#pokeTabNum").html(response.id);
         $("#pokeTabType").html(response.type);
-        $("#pokeTabHt").html(response.height * 10 + "cm");
+        $("#pokeTabHt").html(response.height/10 + "m");
         $("#pokeTabWt").html(response.weight * 0.1 + "kg");
       });
 }
