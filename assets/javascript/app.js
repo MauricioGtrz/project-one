@@ -36,8 +36,20 @@ function displayPokemonInfo() {
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
+// var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+//   if (!isChrome){
+//       $('#iframeAudio').remove()
+//   }
+//   else {
+//       $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+//   }
+
 window.onload=function(){
   document.getElementById("hauntedMusic").play();
+}
+
+window.onload=function(){
+  document.getElementById("homeMusic").play();
 }
 
 
