@@ -150,6 +150,6 @@ img.opacity:hover {
 
 #footer {
     display: block;
-    
+    bottom: 0;
 
     }

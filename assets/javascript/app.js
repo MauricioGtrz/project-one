@@ -36,33 +36,41 @@ function displayPokemonInfo() {
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
-// var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-//   if (!isChrome){
-//       $('#iframeAudio').remove()
-//   }
-//   else {
-//       $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-//   }
 
+// Home theme music
+window.onload=function(){
+  document.getElementById("homeMusic").play();
+}
+
+//Zone theme music
+window.onload=function(){
+  document.getElementById("zoneMusic").play();
+}
+
+//Haunted theme music
 window.onload=function(){
   document.getElementById("hauntedMusic").play();
 }
 
 window.onload=function(){
-  document.getElementById("homeMusic").play();
+  document.getElementById("hauntedEffect").play();
 }
 
+//Snow theme music
+window.onload=function(){
+  document.getElementById("snowMusic").play();
+}
 
-// var queryURLmusic = "https://freesound.org/apiv2/search/text/?query=piano&token=PFapxdeGuM4lkfOpgYO76d94lZkeyT6Ae1mNnKBK"
-// ;
+window.onload=function(){
+  document.getElementById("snowEffect").play();
+}
 
-// $.ajax({
-//   url: queryURLmusic,
-//   method: "GET"
-// }).then(function(response) {
-//   console.log(response);
-// });
+//Fire theme music
+window.onload=function(){
+  document.getElementById("fireMusic").play();
+}
 
-// window.onload=function(){
-//   this.document.getElementById("#homePagemusic");
-// }
+//Water theme music
+window.onload=function(){
+  document.getElementById("waterMusic").play();
+}
