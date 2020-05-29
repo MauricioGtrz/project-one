@@ -21,8 +21,12 @@ body {
    
 }
 
+#jumboZones{
+    font-family: 'Orbitron', sans-serif;
+}
+
 .jumbotron p {
-    text-shadow: 3px 2px white;
+    /* text-shadow: 3px 2px white; */
     color:black;
 }
 
@@ -48,6 +52,10 @@ div.card:hover {
     margin-top: 130px;
 }
 
+.card-text{
+
+}
+
 .card {
     opacity: 80%;
 }
@@ -67,7 +75,7 @@ img.opacity:hover {
 
 /* zone page */
 .zoneHQ {
-    background-image: url(../images/Safari_Hut.png);
+    background-image: url(../images/pokemon-pEYKG0.gif);
     background-size: 100%;
     background-repeat: no-repeat;
     

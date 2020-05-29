@@ -44,6 +44,11 @@ window.onload=function(){
 
 //Zone theme music
 window.onload=function(){
+  document.getElementById("zoneEffect").play();
+  document.getElementById("zoneEffect").volume = .2;
+}
+
+window.onload=function(){
   document.getElementById("zoneMusic").play();
 }
 
