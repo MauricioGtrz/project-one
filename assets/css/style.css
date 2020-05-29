@@ -1,6 +1,7 @@
 body {
-    background-image: url(../images/landingpage\ background.jpg);
+    background-image: url(../images/waterfall_4727501940fc89cc0f47d90d0f87be358a6a1.gif);
     background-size: 100%;
+    background-repeat: no-repeat;
     
 }
 
@@ -10,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-position: top, center;
     background-color: #17a2b8;
-    opacity: 60%;
+    opacity: 70%;
 }
 
 .jumbotron h1 {
@@ -83,7 +84,7 @@ img.opacity:hover {
 }
 /* water page */
 .water {
-    background-image: url(../images/water_gif.gif);
+    background-image: url(../images/palm.gif);
     background-size: 100%;
     background-repeat: no-repeat;
     
@@ -148,8 +149,18 @@ img.opacity:hover {
     margin: 5%;
 }
 
+#footerHome {
+    display: block;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    
+
+    }
+
 #footer {
     display: block;
     bottom: 0;
+    text-align: center;    
 
     }
