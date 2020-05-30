@@ -64,8 +64,9 @@ $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
 //GIPHY image pull
 
-$("a").on("click", function() {
-  var pokeGIF = $(this).attr("pokemon-name");
+$(".pokebtn").on("click", function() {
+  var pokeGIF = $(this).find("img").attr("pokemon-name");
+console.log(pokeGIF)
 
   var queryURLGIF = "https://api.giphy.com/v1/gifs/search?q=" +
     pokeGIF + "&api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&limit=4";
