@@ -8,6 +8,7 @@ var pokemonWaterArray = ["magikarp", "staryu", "poliwhirl", "wailord"];
 function displayPokemonInfo() {
     var pokemon = $(this).attr("pokemon-name");
     var queryURL = "https://pokeapi.co/api/v2/pokemon/" + pokemon;
+    var pokemonType;
 
     $.ajax({
         url: queryURL,
@@ -25,13 +26,32 @@ function displayPokemonInfo() {
             stats: response.stats.map( stat => stat.stat.name + ' ' + stat.base_stat).join(", ")
         };
         console.log(pokemon);
+        pokemonType = pokemon.type;
         
-        $("#pokeTabName").html((response.name).substr(0,1).toUpperCase()+(response.name).substr(1));
-        $("#pokeTabNum").html(response.id);
-        $("#pokeTabType").html(response.type);
-        $("#pokeTabHt").html((response.height/10).toFixed(2) + "m");
-        $("#pokeTabWt").html((response.weight * 0.1).toFixed(2) + "kg");
-      });
+        $("#pokeTabName").html((pokemon.name).substr(0,1).toUpperCase()+(pokemon.name).substr(1));
+        $("#pokeTabNum").html(pokemon.id);
+        $("#pokeTabType").html(pokemon.type);
+        $("#pokeTabHt").html((pokemon.height/10).toFixed(2) + "m");
+        $("#pokeTabWt").html((pokemon.weight * 0.1).toFixed(2) + "kg");
+
+        
+        var typeURL = "https://pokeapi.co/api/v2/type/" + pokemonType;
+
+        $.ajax({
+          url: typeURL,
+          method: "GET"
+        }).then(function(data) {
+          console.log(data);
+          const type = {
+            id: data.id,
+            strong_against: data.damage_relations.double_damage_from.map( double_damage_from => double_damage_from.name).join(", "),
+            weak_against: data.damage_relations.double_damage_to.map( double_damage_to => double_damage_to.name).join(", "),
+          };
+          console.log(type);
+          $("#pokeTabStr").html(type.strong_against);
+          $("#pokeTabWk").html(type.weak_against);
+        });
+      });      
 }
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
