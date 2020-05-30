@@ -38,20 +38,39 @@ $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
 //GIPHY image pull
 
-var pokemonGIF = "#pokemon-name";
-var queryURLGIF = "https://api.giphy.com/v1/gifs/search?api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&q=" + pokemonGIF + "&limit=4";
+$("a").on("click", function() {
+  var pokeGIF = $(this).attr("pokemon-name");
 
-// Creating an AJAX call for the specific character button being clicked
-$.ajax({
-  url: queryURLGIF,
-  method: "GET"
-}).then(function(response) {
- $("pokemon-view").html("");
-  console.log(response);
-  var results = response.data;
+  var queryURLGIF = "https://api.giphy.com/v1/gifs/search?q=" +
+    pokeGIF + "&api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&limit=4";
 
- console.log("length", results.length);
+  $.ajax({
+    url: queryURLGIF,
+    method: "GET"
+
+  })
+    .then(function(response) {
+      var results = response.data;
+      console.log(results);
+
+      for (var i = 0; i < results.length; i++) {
+        
+          var gifDiv = $("<div>");
+
+          var pokemonImage = $("<img>");
+
+          pokemonImage.attr("src", results[i].images.fixed_height.url);
+
+          gifDiv.append(pokemonImage);
+
+          $("#gifs-appear-here").prepend(gifDiv);
+        
+      }
+    });
 });
+
+
+
 
 // Home theme music
 window.onload=function(){
