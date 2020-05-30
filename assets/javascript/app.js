@@ -26,6 +26,11 @@ function displayPokemonInfo() {
             stats: response.stats.map( stat => stat.stat.name + ' ' + stat.base_stat).join(", ")
         };
         console.log(pokemon);
+        var moves_array = [];
+        for (let i = 0; i < 3; i++) {
+          moves_array.push(response.moves[i].move.name);
+        }
+        console.log(moves_array);
         pokemonType = pokemon.type;
         
         $("#pokeTabName").html((pokemon.name).substr(0,1).toUpperCase()+(pokemon.name).substr(1));
@@ -33,6 +38,7 @@ function displayPokemonInfo() {
         $("#pokeTabType").html(pokemon.type);
         $("#pokeTabHt").html((pokemon.height/10).toFixed(2) + "m");
         $("#pokeTabWt").html((pokemon.weight * 0.1).toFixed(2) + "kg");
+        $("#pokeTabMoves").html(moves_array.join(", "));
 
         
         var typeURL = "https://pokeapi.co/api/v2/type/" + pokemonType;
