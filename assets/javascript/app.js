@@ -71,6 +71,8 @@ console.log(pokeGIF)
   var queryURLGIF = "https://api.giphy.com/v1/gifs/search?q=" +
     pokeGIF + "&api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&limit=4";
 
+
+
   $.ajax({
     url: queryURLGIF,
     method: "GET"
@@ -78,7 +80,13 @@ console.log(pokeGIF)
   })
     .then(function(response) {
       var results = response.data;
+      
       console.log(results);
+      if (results.length === 0){
+        return handleDefault()
+      }
+
+      $("#gifs-appear-here").empty();
 
       for (var i = 0; i < results.length; i++) {
         
@@ -96,7 +104,38 @@ console.log(pokeGIF)
     });
 });
 
+function handleDefault(){
+  var queryURLGIF = "https://api.giphy.com/v1/gifs/search?q=pokemon&api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&limit=4";
 
+
+
+$.ajax({
+  url: queryURLGIF,
+  method: "GET"
+
+})
+  .then(function(response) {
+    var results = response.data;
+    
+    console.log(results);
+    
+    $("#gifs-appear-here").empty();
+
+    for (var i = 0; i < results.length; i++) {
+      
+        var gifDiv = $("<div>");
+
+        var pokemonImage = $("<img>");
+
+        pokemonImage.attr("src", results[i].images.fixed_height.url);
+
+        gifDiv.append(pokemonImage);
+
+        $("#gifs-appear-here").prepend(gifDiv);
+      
+    }
+  });
+}
 
 
 // Home theme music
