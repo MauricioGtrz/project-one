@@ -8,6 +8,7 @@ var pokemonWaterArray = ["magikarp", "staryu", "poliwhirl", "wailord"];
 function displayPokemonInfo() {
     var pokemon = $(this).attr("pokemon-name");
     var queryURL = "https://pokeapi.co/api/v2/pokemon/" + pokemon;
+    var pokemonType;
 
     $.ajax({
         url: queryURL,
@@ -25,33 +26,117 @@ function displayPokemonInfo() {
             stats: response.stats.map( stat => stat.stat.name + ' ' + stat.base_stat).join(", ")
         };
         console.log(pokemon);
+        var moves_array = [];
+        for (let i = 0; i < 3; i++) {
+          moves_array.push(response.moves[i].move.name);
+        }
+        console.log(moves_array);
+        pokemonType = pokemon.type;
         
-        $("#pokeTabName").html((response.name).substr(0,1).toUpperCase()+(response.name).substr(1));
-        $("#pokeTabNum").html(response.id);
-        $("#pokeTabType").html(response.type);
-        $("#pokeTabHt").html((response.height/10).toFixed(2) + "m");
-        $("#pokeTabWt").html((response.weight * 0.1).toFixed(2) + "kg");
-      });
+        $("#pokeTabName").html((pokemon.name).substr(0,1).toUpperCase()+(pokemon.name).substr(1));
+        $("#pokeTabNum").html(pokemon.id);
+        $("#pokeTabType").html(pokemon.type);
+        $("#pokeTabHt").html((pokemon.height/10).toFixed(2) + "m");
+        $("#pokeTabWt").html((pokemon.weight * 0.1).toFixed(2) + "kg");
+        $("#pokeTabMoves").html(moves_array.join(", "));
+
+        
+        var typeURL = "https://pokeapi.co/api/v2/type/" + pokemonType;
+
+        $.ajax({
+          url: typeURL,
+          method: "GET"
+        }).then(function(data) {
+          console.log(data);
+          const type = {
+            id: data.id,
+            strong_against: data.damage_relations.double_damage_from.map( double_damage_from => double_damage_from.name).join(", "),
+            weak_against: data.damage_relations.double_damage_to.map( double_damage_to => double_damage_to.name).join(", "),
+          };
+          console.log(type);
+          $("#pokeTabStr").html(type.strong_against);
+          $("#pokeTabWk").html(type.weak_against);
+        });
+      });      
 }
 
 $(document).on("click", ".pokemonimg", displayPokemonInfo);
 
 //GIPHY image pull
 
-var pokemonGIF = "#pokemon-name";
-var queryURLGIF = "https://api.giphy.com/v1/gifs/search?api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&q=" + pokemonGIF + "&limit=4";
+$(".pokebtn").on("click", function() {
+  var pokeGIF = $(this).find("img").attr("pokemon-name");
+console.log(pokeGIF)
 
-// Creating an AJAX call for the specific character button being clicked
+  var queryURLGIF = "https://api.giphy.com/v1/gifs/search?q=" +
+    pokeGIF + "&api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&limit=4";
+
+
+
+  $.ajax({
+    url: queryURLGIF,
+    method: "GET"
+
+  })
+    .then(function(response) {
+      var results = response.data;
+      
+      console.log(results);
+      if (results.length === 0){
+        return handleDefault()
+      }
+
+      $("#gifs-appear-here").empty();
+
+      for (var i = 0; i < results.length; i++) {
+        
+          var gifDiv = $("<div>");
+
+          var pokemonImage = $("<img>");
+
+          pokemonImage.attr("src", results[i].images.fixed_height.url);
+
+          gifDiv.append(pokemonImage);
+
+          $("#gifs-appear-here").prepend(gifDiv);
+        
+      }
+    });
+});
+
+function handleDefault(){
+  var queryURLGIF = "https://api.giphy.com/v1/gifs/search?q=pokemon&api_key=cz8O9ixLJfRaCdt4Tof9PEYuxvrXx2Kz&limit=4";
+
+
+
 $.ajax({
   url: queryURLGIF,
   method: "GET"
-}).then(function(response) {
- $("pokemon-view").html("");
-  console.log(response);
-  var results = response.data;
 
- console.log("length", results.length);
-});
+})
+  .then(function(response) {
+    var results = response.data;
+    
+    console.log(results);
+    
+    $("#gifs-appear-here").empty();
+
+    for (var i = 0; i < results.length; i++) {
+      
+        var gifDiv = $("<div>");
+
+        var pokemonImage = $("<img>");
+
+        pokemonImage.attr("src", results[i].images.fixed_height.url);
+
+        gifDiv.append(pokemonImage);
+
+        $("#gifs-appear-here").prepend(gifDiv);
+      
+    }
+  });
+}
+
 
 // Home theme music
 window.onload=function(){
